@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTrantra</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* background: url(''); */
+            background-repeat: no-repeat;
+            background-position: cover;
+            font-family: 'Cabin', sans-serif;
+        }
+
+        .navber {
+            display: flex;
+            height: 50px;
+            /* border: 1px solid black ; */
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 30px 0px 20px;
+            margin-top: 10px;
+            /* position: fixed; */
+        }
+
+        .logoImg {
+            height: 30px;
+        }
+
+        .navMenu {
+            list-style: none;
+            padding: 0px;
+            display: flex;
+
+        }
+
+        .list-itam {
+            margin: 0px 25px;
+            font-size: 18px;
+            padding: 10px;
+            transition: all 0.8s;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .list-itam:hover {
+            background-color: rgb(187, 187, 187);
+            border-radius: 3px;
+        }
+
+        .btn {
+            border: 1px solid black;
+            font-size: 18px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-top: 2px
+        }
+
+        .btn:hover {
+            background-color: rgb(77, 77, 77);
+        }
+
+        main {
+            display: flex;
+            width: 100%;
+            height: auto;
+            /* border: 2px solid red; */
+        }
+
+        @media screen and (max-width : 500px) {
+            main {
+                flex-direction: column;
+            }
+            .containerSub{
+                flex-direction: column;
+            }
+            .navber{
+                display: none;
+            }
+        
+        }
+
+        .Img img {
+            height: 500px;
+            /* border: 2px solid red; */
+            padding: 20px;
+            margin: 30px 30px;
+
+        }
+
+        .firstPara {
+            /* border: 2px solid rebeccapurple; */
+            height: 500px;
+            padding: 40px;
+            margin: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 80px;
+        }
+
+        .firstPara p {
+            font-size: 22px;
+            padding: 10px;
+        }
+
+        .mybtn {
+            display: flex;
+            position: relative;
+            top: 30px;
+            /* padding: 10px; */
+            border: 1px solid gray;
+            height: 40px;
+            border-radius: 3px;
+        }
+
+        input {
+            font-size: 15px;
+            padding: 6px;
+            border: none;
+            outline: none;
+        }
+
+        .btn1 {
+            padding: 5px;
+            width: 200px;
+            font-size: 15px;
+            /* height: 100%; */
+            border: none;
+            background-color: rgb(240, 116, 116);
+        }
+
+        .btn1:hover {
+            background-color: rgb(165, 186, 231);
+            transition: all 0.8s;
+
+        }
+
+        .Acc {
+            display: flex;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .Acc a {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .Acc p {
+            font-size: 18px;
+            /* margin-top: 10px;     */
+        }
+
+        .Acc a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .img2 img {
+            width: 80%;
+            /* height: 40%; */
+            display: flex;
+            margin: 0px auto;
+        }
+
+        .meet0 {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+            background-color: rgb(221, 255, 255);
+            /* margin-top: 30px; */
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        @media screen and (max-width : 500px) {
+            .meet0 {
+                flex-direction: column;
+            }
+
+            .firstmeet {
+                order: 2 !Important;
+            }
+
+            .meeting1 {
+                order: 1 !Important;
+            }
+        }
+
+        .firstmeet {
+
+            width: 85%;
+            height: auto;
+            margin: 20px 59px;
+            padding: 52px 4px;
+            /* border: 1px solid red; */
+        }
+
+        .jumbotext {
+            font-size: 35px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .jumbopara {
+            font-size: 24px;
+            color: rgb(124, 124, 124);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .meetlist {
+            /* margin: 3px 2px; */
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        .meetlist li {
+            margin: 0px 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding: 8px;
+        }
+
+        .meetimg1 img {
+            display: flex;
+            /* justify-content: center;
+            align-items: center; */
+
+
+        }
+
+        #imgg {
+            width: 60%;
+            height: 30%;
+            margin: 45px 35px;
+
+        }
+
+        #imggg {
+            width: 60%;
+            height: 30%;
+            margin: 45px 35px;
+            ;
+        }
+
+        .meet1 {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+            background-color: rgb(223 203 239);
+            /* margin-top: 30px; */
+        }
+
+        .meetimg2 {
+            width: 500px;
+            /* padding: 20px; */
+            /* border: 1px solid red; */
+        }
+
+        .meetimg2 img {
+            height: 29%;
+            margin: 13px 75px;
+        }
+
+        #pic1 {
+            width: 300px;
+        }
+
+        #pic2 {
+            width: 300px;
+        }
+
+        #pic3 {
+            width: 300px;
+        }
+
+        .secondmeet {
+            /* border: 1px solid green; */
+            margin: 25px 40px;
+            padding: 10px 55px;
+        }
+
+        @media screen and (max-width : 500px) {
+            .meet1 {
+                flex-direction: column;
+            }
+
+            .meetimg {
+                order: 1 !Important;
+            }
+
+            .secondmeet {
+                order: 2 !Important;
+            }
+        }
+
+        .secondmeet h2 {
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .secondmeet p {
+            color: gray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 22px;
+        }
+
+        .secondmeet li {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            margin: 0px 20px;
+            padding: 3px;
+        }
+
+        .meet3 {
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+            background-color: rgb(244, 255, 246);
+            padding: 28px;
+        }
+
+        @media screen and (max-width : 500px) {
+            .meet3 {
+                flex-direction: column;
+            }
+
+            .meetimg {
+                order: 1 !Important;
+            }
+
+            .thiredmeet {
+                order: 2 !Important;
+            }
+        }
+
+        .thiredmeet {
+            justify-content: space-evenly;
+            padding: 15px 15px;
+            order: 1;
+
+        }
+
+        .thiredmeet h2 {
+            font-size: 35px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .thiredmeet p {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .thiredmeet li {
+            margin: 0px 20px;
+            padding: 3px 10px;
+            font-size: 18px;
+        }
+
+        .meetimg {
+            order: 2;
+        }
+
+        .meetimg img {
+            width: 50%;
+            /* height: 300px; */
+            margin: 45px;
+        }
+
+        .meet4 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            background-color: white;
+            padding: 28px;
+        }
+
+        @media screen and (max-width : 500px) {
+            .meet4Sub{
+                flex-direction: column;
+            }
+
+            .fourthmeet{
+                order: 2 !Important;
+            }
+
+            .meetimg5{
+                order: 1 !Important;
+            }
+        }
+
+        .meet4Sub {
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-evenly; */
+            justify-content: center;
+            margin: 25px;
+
+        }
+
+        .fourthmeet {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .meet4Head {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+        }
+
+        .meet4Head h3 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 40px;
+        }
+
+        .meet4Head p {
+            font-size: 25px;
+        }
+
+        .fourthmeet h3 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .fourthmeet p {
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: gray
+        }
+
+        .fourthlist {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            width: 406px;
+            padding: 12px 21px;
+        }
+
+        .fourthlist li a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .meetimg5 {
+            height: auto;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .fourthlist1 {
+            margin: 5px 20px;
+        }
+
+        .meetimg5 img {
+            margin: 15px;
+            /* height: 350px; */
+            width: 300px;
+        }
+
+        .abc {
+            font-weight: bold;
+        }
+
+        .fifthmeet {
+            display: flex;
+            justify-content: space-evenly;
+            /* width: 50%; */
+        }
+
+        .fifthmeet img {
+            width: 450px;
+            height: 300px;
+        }
+
+        .fifthlist {
+            justify-content: center;
+            font-size: 19px;
+            width: 400px;
+            height: 300px;
+            padding: 10px 20px;
+            /* border: 1px solid red; */
+        }
+
+        .fifthlist2 {
+            margin: 5px 20px;
+            padding: 2px;
+        }
+
+        .meet6sub {
+            width: 100%;
+
+        }
+
+        .sixthmeet {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sixthlist {
+            font-size: 18px;
+            margin: 15px;
+        }
+
+        .sixthlist2 {
+            padding: 5px;
+            margin: 0px 20px;
+        }
+
+        #abc1 {
+            font-weight: bold;
+        }
+
+        #abc2 {
+            font-weight: bold;
+        }
+
+        .meetimg6 img {
+            width: 350px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .meet7sub {
+            width: 100%;
+
+        }
+
+        .sevenmeet {
+            display: flex;
+            justify-content: center;
+        }
+
+        .meetimg7 img {
+            margin: 25px 17px;
+           width: 350px;
+        }
+
+        .sevenlist {
+            font-size: 16px;
+            padding: 10px;
+            margin: 30px 60px;
+        }
+
+        .sevenlist2 {
+            margin: 5px 19px;
+        }
+
+        #abc3 {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .containerHead {
+            background-color: antiquewhite;
+            width: 100%;
+            height: auto;
+            padding-top: 10px;
+        }
+
+        .containerSub {
+            justify-content: space-evenly;
+        }
+
+        .maintext {
+            padding: 10px 17px;
+        }
+
+        #text1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 45px;
+        }
+
+        #text2 {
+            color: gray;
+            font-size: 25px;
+        }
+
+        .containerSub {
+            display: flex;
+            /* justify-content: space-evenly; */
+        }
+
+        .bom {
+            margin: 17px 8px;
+            padding: 20px 1px;
+            border: 1px solid gray;
+        }
+
+        .bom img {
+            height: 80px;
+        }
+
+        .kan {
+            margin: 17px 8px;
+            padding: 18px 0;
+            border: 1px solid gray;
+        }
+
+        .kan img {
+
+            height: 100px;
+        }
+
+        .guw {
+            margin: 17px 10px;
+            padding: 18px 0;
+            border: 1px solid gray;
+        }
+
+        .guw img {
+
+            height: 100px;
+        }
+
+        .lpu {
+            margin: 17px 8px;
+            padding: 18px 0;
+            border: 1px solid gray;
+        }
+
+        .lpu img {
+
+            height: 100px;
+        }
+
+        .myfoot {
+            padding: 10px;
+            margin: 5px;
+            /* border: 2px solid rgb(243, 0, 0); */
+            text-align: center;
+        }
+
+        .mytext {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+        }
+
+        .mytext p a {
+            margin: 3px;
+            padding: 3px;
+        }
+
+        .mytext p a:hover {
+            color: rgb(78, 78, 78);
+            text-decoration: underline;
+        }
+
+        #f11 {
+            color: rgb(78, 78, 78);
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navber">
+            <div>
+                <img class="logoImg" src="logo-black-text.png" alt="">
+            </div>
+            <ul class="navMenu">
+                <li class="list-itam"><a href="#">Products</a></li>
+                <li class="list-itam"><a href="#">Live Meetings</a></li>
+                <li class="list-itam"><a href="#">Recognitions</a></li>
+                <li class="list-itam"><a href="#">Custamers</a></li>
+                <li class="list-itam"><a href="#">Help & Supports</a></li>
+            </ul>
+            <button class="btn">Log in</button>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <div class="Img">
+            <img src="undraw_People.png" alt="">
+        </div>
+        <div class="firstPara">
+            <h2>Your irtual school, in minuttes!</h2>
+            <p>Online Classes, Assessments, Proctored Exams, Assignments, Auto-grading, Plagiarism Checks — all in one
+                platform Email</p>
+            <div class="mybtn">
+                <input type="text" placeholder="Enter your email">
+                <button class="btn1">Register Univ or school</button>
+            </div>
+            <div class="Acc">
+                <p>Existing User!</p>
+                <a href="#">Log in here</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="meet">
+        <div class="img2">
+            <img src="img2.jpg" alt="error loding">
+        </div>
+    </section>
+    <section class="meet0">
+        <div class="firstmeet">
+            <h2 class="jumbotext">Live Meetings</h2>
+            <p class="jumbopara">Secure online conferencing from any device on even log bandwidth networks at an
+                unbelievable price</p>
+            <ul class="meetlist">
+                <li>Secure: 2-factor authentication based access, organizational role based access control, encryption
+                    over wire, encryption at rest.</li>
+                <li>No apps or special devices needed. A modern browsers on any PC or mobile phone is all that is needed
+                </li>
+                <li>Unlimited secure cloud stored recordings, with video indexing, rich composite recording playback
+                </li>
+                <li>Powerful time-table manager for scheduled meetings. One click ad-hoc hosting with easy participant
+                    selection</li>
+                <li>Adaptive bitrate control, specially tuned for low bandwidth situations</li>
+                <li>Rich feature-set for teachers such as Second Device™ technology, support for chalkboard, pen & paper
+                    based teaching, shared whiteboards, real-time annotations, synchronized video playback for all
+                    participants, synchronized powerpoint sharing, live polls, engagement tracking, etc.</li>
+                <li>Unlimited concurrent meetings</li>
+                <li>Automatically assigned break-out rooms, with manual controls</li>
+                <li>Flexible room control, with ability to block/unblock various capabilities, both for individual
+                    participants as well as all participants in one go - microphone mute/unmute, webcam on/off, public
+                    chat, private chat, shared notes, etc.</li>
+                <li>Comprehensive analytics and reports around attendance, participation and engagement, with custom
+                    built models for education sector</li>
+            </ul>
+        </div>
+        <div class="meetimg1">
+            <img id="imgg" src="img11.svg" alt="">
+            <img id="imggg" src="img12.svg" alt="">
+        </div>
+    </section>
+    <section class="meet1">
+        <div class="meetimg2">
+            <img id="pic1" src="studentexam.svg" alt="">
+            <img id="pic2" src="studentexam1.svg" alt="">
+            <img id="pic3" src="studentexam2.svg" alt="">
+        </div>
+        <div class="secondmeet">
+            <h2 class="combotext">Assessment Platform with Remote Proctoring</h2>
+            <p class="combopara">Comprehensive assessment platform with support for a variety of tests & an
+                ultra-powerful remote proctoring solution for uncontrollable test-taker environments
+                unbelievable price</p>
+            <ul class="secondlist">
+                <li>Secure: 2-factor authentication based access, organizational role based access control, encryption
+                    over wire, encryption at rest</li>
+                <li>Comprehensive composite recording and playback of all aspects of a test, including multiple cameras,
+                    screen, times, navigation activity, locations, answers, multiple audio streams
+                </li>
+                <li>Automatic blocking of bad actors with complete control for proctor to extend or terminate the test
+                </li>
+                <li>Over 200 knobs to design and schedule tests from a variety of auto-evaluateed and manually evaluated
+                    question types</li>
+                <li>Auto-evaluated question types include computer programming in multiple languages, variants of
+                    multiple choice, fill in the blanks, numerical type, match columns, spoken english, reading
+                    comprehension, listening comprehension, etc.</li>
+                <li>Manually evaluated question types include subjective essay, viva voce, document upload, etc.</li>
+                <li>Bulk import of question banks - automatic where standardized templates are used and manual as part
+                    of premium support services for ad hoc formats</li>
+                <li>Manually evaluated question types include subjective essay, viva voce, document upload, etc.</li>
+            </ul>
+        </div>
+    </section>
+    <section class="meet3">
+        <div class="thiredmeet">
+            <h2 class="gambotext">Virtual university / school</h2>
+            <p class="gambopara">Online Classes + LMS + Assessments + Remote Proctoring + Interactive Courses</p>
+            <ul class="thiredlist">
+                <li>Powerful learning management system (LMS) with complete data isolation between different schools
+                </li>
+                <li>Organizations & user management with role based access control with secure multi-factor
+                    authentication</li>
+                <li>Curriculum management, controllable at individual as well as organization hierarchy level</li>
+                <li>Rich online course authoring & design with support for rich media, animations, etc.</li>
+                <li>Auto-evaluated question types include computer programming in multiple languages, variants of
+                    multiple choice, fill in the blanks, numerical type, match columns, spoken english, reading
+                    comprehension, listening comprehension, etc.</li>
+                <li>Manually evaluated question types include subjective essay, viva voce, document upload, etc.</li>
+                <li>Timed assignments and self-paced exercises</li>
+                <li>Testing and assessment platform with remote proctoring</li>
+                <li>Secure digital vault for question banks</li>
+                <li>Live online classes with full timetable integration</li>
+                <li>Integrated secure web & mobile payments from students towards various fees</li>
+            </ul>
+        </div>
+        <div class="meetimg">
+            <img id="pic-1" src="teaching.svg" alt="">
+        </div>
+    </section>
+    <section class="meet4">
+        <div class="meet4Head">
+            <h3 class="hambotext">Interactive Online Courses with Certifications</h3>
+            <p class="hambopara">Learn by doing, live hands-on practice with instant feedback and corrective help,
+                self-paced interactive courses</p>
+        </div>
+        <div class="meet4Sub">
+            <div class="fourthmeet">
+                <ul class="fourthlist">
+                    <li class="abc">Award winning programming course
+                    </li>
+                    <ul class="fourthlist1">
+                        <li><a href="#">Programming in Python
+                            </a></li>
+                        <li><a href="#">Programming in Java
+                            </a></li>
+                        <li><a href="#">Programming in C
+                            </a></li>
+                        <li><a href="#">Programming in C++
+                            </a></li>
+                    </ul>
+                    <li class="abc">Courses on popular technologies
+                    </li>
+                    <ul class="fourthlist1">
+                        <li><a href="#">Big Data + Hadoop
+                            </a></li>
+                        <li><a href="#">Selenium 2.0
+                            </a></li>
+                        <li>Internet of Things</li>
+                        <li>Fundamentals of Machine Learning & Data Science.
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="meetimg5">
+                <img id="picc" src="ct1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="meet5Sub">
+            <div class="fifthmeet">
+                <div class="meetimg6">
+                    <img id="piccc" src="undraw2.svg" alt="">
+                </div>
+                <ul class="fifthlist">
+                    <li class="abc">Courses on computer science fundamentals
+                    </li>
+                    <ul class="fifthlist2">
+                        <li><a href="#">Computational Thinking & Programming for Problem Solving
+                            </a></li>
+                        <li><a href="#">Data Structures in C
+                            </a></li>
+                        <li><a href="#">Data Structures in C++
+                            </a></li>
+                        <li><a href="#">Design and Analysis of C
+                            </a></li>
+                        <li><a href="#">Design and Analysis of C++
+                            </a></li>
+                        <li><a href="#">Advanced Data Structure in C
+                            </a></li>
+                        <li><a href="#">Advanced Data Structure in C++
+                            </a></li>
+                        <li><a href="#">Data Structures in Python
+                            </a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="meet6Sub">
+            <div class="sixthmeet">
+                <ul class="sixthlist">
+                    <li id="abc1">Courses on computer science fundamentals
+                    </li>
+                    <ul class="sixthlist2">
+                        <li><a href="#">Instructor led Internship Programs with Project
+                            </a></li>
+                        <li><a href="#">Internet of Things
+                            </a></li>
+                        <li><a href="#">Fundamentals of Machine learning & Data Science
+                            </a></li>
+
+                    </ul>
+                    <li id="abc2">Campus Recuritment Preparation
+                    </li>
+                    <ul class="sixthlist2">
+                        <li><a href="#">Quantitative Aptitude
+                            </a></li>
+                        <li><a href="#">Verbal
+                            </a></li>
+                        <li><a href="#">Analytical Reasoning
+                            </a></li>
+                        <li><a href="#">English
+                            </a></li>
+                        <li><a href="#">Communication & Interviewing
+                            </a></li>
+                        <li><a href="#">Competitive Programming
+                            </a></li>
+                    </ul>
+                </ul>
+                <div class="meetimg6">
+                    <img id="piccc" src="undraw3.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="meet7Sub">
+            <div class="sevenmeet">
+                <div class="meetimg7">
+                    <img id="piccc" src="undraw4.svg" alt="">
+                </div>
+                <ul class="sevenlist">
+                    <li id="abc3">Study Abroad
+                    </li>
+                    <ul class="sevenlist2">
+                        <li><a href="#">ACT
+                            </a></li>
+                        <li><a href="#">IELTS
+                            </a></li>
+                        <li><a href="#">SAT
+                            </a></li>
+                        <li><a href="#">TOEFL
+                            </a></li>
+                        <li><a href="#">GRE
+                            </a></li>
+                        <li><a href="#">GMAT
+                            </a></li>
+                    </ul>
+                </ul>
+                </di1>
+            </div>
+    </section>
+    <section>
+        <div class="containerHead">
+            <div class="maintext">
+                <h1 id="text1">Customer</h1>
+                <p id="text2">Listed below are a small subset of our customers</p>
+            </div>
+            <div class="containerSub">
+                <div class="bom">
+                    <img src="https://s3.ap-south-1.amazonaws.com/ct-client-logos/logos/gayathri1 " alt="">
+                </div>
+                <div class="kan">
+                    <img src="https://s3.ap-south-1.amazonaws.com/ct-client-logos/logos/iitk" alt="">
+                </div>
+                <div class="guw">
+                    <img src="https://s3.ap-south-1.amazonaws.com/ct-client-logos/logos/gayathri2" alt="">
+                </div>
+                <div class="lpu">
+                    <img src="https://s3.ap-south-1.amazonaws.com/ct-client-logos/logos/lpu" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <footer class="myfoot">
+            <div class="mytext">
+                <p>
+                    <a id="f11" href="#">© </a>
+                    <a id="f1" href="#"> Copyright CodeTantra.com</a>
+                    <a id="f2" href="#">Term & Privacy</a>
+                    <a id="f3" href="#">About</a>
+                    <a id="f4" href="#">Help & Support</a>
+                    <a id="f5" href="#">Sales</a>
+                </p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>
